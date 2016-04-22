@@ -1,0 +1,17 @@
+{
+  "name": "greenhouse",
+  "description": "",
+  "main": "",
+  "authors": [
+    "mmloveaa <mandychan1128@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/mmloveaa/greenhouse_project",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
