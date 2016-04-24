@@ -1,0 +1,43 @@
+<h1>PROFILE!!!!</h1>
+
+
+<img ng-src={{image}}>
+
+<form name='updateForm' ng-submit='update(newUser)'>
+
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text"
+           class='form-control'
+           ng-model='newUser.name'
+           name="name"
+           id="name"
+           required>
+   <label for="name">New Password:</label>
+   <input type="password"
+          class='form-control'
+          ng-model='newUser.password'
+          name="password"
+          id="password"
+          required>
+    <label for="name">New Email:</label>
+    <input type="email"
+           class='form-control'
+           ng-model='newUser.email'
+           name="email"
+           id="email"
+           required>
+    <label for="image">New Image:</label>
+    <input type="text"
+           class='form-control'
+           ng-model='newUser.image'
+           name="image"
+           id="image"
+           required>
+  </div>
+
+  <button type="submit"
+          class="btn btn-default">update
+  </button>
+
+</form>
