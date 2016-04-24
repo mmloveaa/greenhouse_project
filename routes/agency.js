@@ -7,5 +7,8 @@ router.get('/', function(req, res, next) {
 });
 
 
-r
+router.post('/companies', function(req,res,next){
+  res.send("get all companies");
+});
+
 module.exports = router;
