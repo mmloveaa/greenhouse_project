@@ -30,3 +30,25 @@ app.service('AuthService', function($http, $state, UserService) {
     });
   };
 });
+
+app.service('UserService', function($http) {
+  this.set = function(user) {
+    console.log(user);
+    this.username = user.username;
+    this._id = user._id;
+    this.image = user.image;
+  };
+  this.destroy = function() {
+    this.username = null;
+    this._id = null;
+    this.image = null;
+  };
+  this.update = function(newUser) {
+    var userId = this._id;
+    console.log("MADE IT TO SERVICE");
+    return $http.put(`/users/update/${userId}`,newUser)
+    .then(res => {
+      this.set(res.data);
+    })
+  }
+});
