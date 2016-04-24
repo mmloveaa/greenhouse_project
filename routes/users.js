@@ -6,6 +6,12 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
+router.put('/update/:_id', User.authMiddleware, function(req, res, next) {
+  console.log("req params: ",req.params);
+  User.findByIdAndUpdate(req.params._id, {$set:{ image: req.body.image }}, {new:true},function(err, user) {
+    res.status(err ? 400 : 200).send(err || user);
+  });
+});
 
 
 router.delete('/logout', function(req, res) {
