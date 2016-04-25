@@ -5,7 +5,7 @@ var app = angular.module('userAuth', ['ui.router']);
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', { url: '/', templateUrl: '/html/home.html' })
-    // .state('auth', { url: '/auth', templateUrl: '/html/auth.html' })
+    .state('auth', { url: '/auth', templateUrl: '/html/auth.html' })
     .state('login',    { url: '/login',    templateUrl: '/html/auth.html', controller: 'authCtrl' })
     .state('register', { url: '/register', templateUrl: '/html/auth.html', controller: 'authCtrl' })
 
